@@ -24,7 +24,7 @@ me to sell, to surrender, or to lose.
 
 | Project | What it is | Status |
 |---------|-----------|--------|
-| [sandbox-audio](https://github.com/Ryan-Howard-Dev/sandbox-audio) | **Sandbox Audio** — a player for music, podcasts, audiobooks and ebooks. Your files are held on the device itself, so playback continues when the connection does not. It runs on Android, Android TV and desktop, and it can read the ebooks and documents you already own aloud. | Beta |
+| [sandbox-audio](https://github.com/Ryan-Howard-Dev/sandbox-audio) | **Sandbox Audio** — a player built on three pillars: music, podcasts and audiobooks. The audiobooks pillar covers reading as well as listening, taking EPUB, PDF, DOCX, HTML, Markdown and plain text and narrating any of them through the device’s own speech engine, so a book or a paper held only as a file can be listened to. It reads M4B chapter marks, regroups recordings split across many files, imports a Calibre library from its folder tree, and searches LibriVox, Project Gutenberg and the Internet Archive. Files are held on the device itself, so playback continues when the connection does not. Runs on Android, Android TV and desktop. | Beta |
 | [sandbox-os](https://github.com/Ryan-Howard-Dev/sandbox-os) | **Sandbox OS** — a Debian-based operating system arranged around *stations*. This repository holds the architecture, the decisions behind it, and the specification for each station. | In development |
 | [sandbox-builder-docs](https://github.com/Ryan-Howard-Dev/sandbox-builder-docs) | **Sandbox Builder** — the interface and compilation tools that the stations are assembled from. The operator documentation is public; the application source is not. | In development |
 
