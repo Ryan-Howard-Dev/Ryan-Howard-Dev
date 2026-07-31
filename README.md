@@ -1,41 +1,89 @@
 # Ryan Howard
 
-I build **Sandbox** — software that runs on hardware you own instead of on someone else's servers.
-There are three applications so far, for Linux, Android and the web.
+I build **Sandbox**: a group of applications that keep your media, your documents and your records
+on hardware you own, rather than on a company's servers.
 
-The principle behind all of them is the same. Your music, your books and your files stay on your own
-machines. Nothing asks you to create an account, nothing reports back to me, and where something
-isn't finished the documentation says so.
+## The problem this addresses
 
-## The projects
+Most consumer software is paid for by what it learns about the people using it. Listening
+histories, reading habits, contacts and location are gathered, retained and sold on, and the
+service stays useful only for as long as the company continues to operate and the subscription
+continues to be paid. When either of those stops, the library goes with it. A collection assembled
+over years can be emptied by a licensing dispute the owner never hears about.
 
-| Project | What it does | Status |
-|---------|-------------|--------|
-| [sandbox-audio](https://github.com/Ryan-Howard-Dev/sandbox-audio) | **Sandbox Audio** plays music, podcasts, audiobooks and ebooks. Your files sit on your own device, so it carries on working when the internet doesn't. It runs on Android, Android TV and desktop. | Beta |
-| [sandbox-os](https://github.com/Ryan-Howard-Dev/sandbox-os) | **Sandbox OS** is a Debian-based system arranged around whole activities — playing media, handling documents, buying and selling — rather than a screen full of separate programs. This repository holds the architecture and the reasoning behind it. | In development |
-| [sandbox-builder-docs](https://github.com/Ryan-Howard-Dev/sandbox-builder-docs) | **Sandbox Builder** is the interface and the build tools behind those activities. The operator guide is public; the source is not. | In development |
+Sandbox reverses that arrangement. The files are yours and they remain on your own devices. There
+is no account on a server belonging to me, because there is no server belonging to me.
 
-All three can share a small server that you run at home. It keeps your library in step across your
-devices, handles searching, and lets one device pick up whatever another was playing. None of it
-leaves your own network. At the moment that server lives inside Sandbox Audio, where it is
-documented in [TIER34.md](https://github.com/Ryan-Howard-Dev/sandbox-audio/blob/main/TIER34.md).
-Separating it into a project of its own is planned, but I haven't started that work.
+**You can still have an account.** Sandbox supports a single identity you create and use across
+every application in the group, so your settings, your library and your history follow you between
+your phone, your desktop and your television. That identity is stored on your own hardware and is
+shared with nobody. It exists to connect your devices to one another, not to connect you to me.
+Nothing is transmitted back to me, so there is nothing for me to sell, hand over, or lose.
+
+## The applications
+
+| Project | What it is | Status |
+|---------|-----------|--------|
+| [sandbox-audio](https://github.com/Ryan-Howard-Dev/sandbox-audio) | **Sandbox Audio** — a player for music, podcasts, audiobooks and ebooks. Your files are held on the device itself, so playback continues when the connection does not. It runs on Android, Android TV and desktop, and it can read the ebooks and documents you already own aloud. | Beta |
+| [sandbox-os](https://github.com/Ryan-Howard-Dev/sandbox-os) | **Sandbox OS** — a Debian-based operating system arranged around *stations*. This repository holds the architecture, the decisions behind it, and the specification for each station. | In development |
+| [sandbox-builder-docs](https://github.com/Ryan-Howard-Dev/sandbox-builder-docs) | **Sandbox Builder** — the interface and compilation tools that the stations are assembled from. The operator documentation is public; the application source is not. | In development |
+
+### What a station is
+
+A conventional desktop presents a screen of separate programs and leaves the user to work out which
+combination performs the task in hand. A station is the task itself, with everything required to
+complete it gathered in one place. The specifications published so far cover media, documents,
+marketplace, social, mail and video. Each is governed by a written constitution setting out what it
+may do, what it may store, and what it must never send elsewhere.
+
+## The Sandbox Server
+
+The applications above can share a single small server that you run at home, on a spare machine, a
+home server or a single-board computer. It is described in full in
+[TIER34.md](https://github.com/Ryan-Howard-Dev/sandbox-audio/blob/main/TIER34.md), and the
+capabilities it does and does not yet have are recorded in
+[the capability matrix](https://github.com/Ryan-Howard-Dev/sandbox-os/blob/main/docs/TIER34-FOUNDER-BRIEF.md).
+
+It performs three jobs:
+
+- **It keeps your library consistent across your devices.** Files added on one device become
+  available on the others, transferred directly between machines on your own network. Nothing is
+  uploaded to an external service on the way.
+- **It searches your collection**, so a large library remains usable from a phone without that
+  phone holding an index of everything.
+- **It lets one device take over from another.** A recording started on a phone can be picked up on
+  a desktop or a television at the point it reached.
+
+Everything remains inside your own network. The server is optional: with no server at all, each
+application works entirely on its own, and only the transfer between devices is lost.
+
+## In development
+
+A unified record of what you have read and listened to, covering music, podcasts, audiobooks and
+ebooks together rather than keeping four separate histories. It will include shelves for what you
+intend to start, what you are part-way through and what you have finished, together with reading
+lists you arrange yourself. Where similar services keep that history on their own servers and
+analyse it, this record stays on your device, with synchronisation between your own machines
+through the Sandbox Server as an option rather than a requirement. Design work is complete;
+implementation has not begun.
 
 ## Also
 
-**Sandbox Wrestling** is a wrestling promotion simulator I am writing in Godot, with a match engine
-of its own. It is a separate project rather than part of Sandbox, and it stays private until it
-reaches Early Access.
+**Sandbox Wrestling** is a wrestling promotion simulator written in Godot, with its own match
+engine and weekly simulation. It is a separate project rather than part of Sandbox, and it remains
+private until it reaches Early Access.
 
-## Worth reading
+## Documentation
 
-- [Sandbox Audio README](https://github.com/Ryan-Howard-Dev/sandbox-audio#readme) — what it does, what it doesn't, and how to build it
-- [Why the library never deletes anything on its own](https://github.com/Ryan-Howard-Dev/sandbox-audio/blob/main/adr/001-locker-never-auto-delete.md) — one rule I wasn't willing to bend
-- [BUILDING.md](https://github.com/Ryan-Howard-Dev/sandbox-audio/blob/main/BUILDING.md) — there are no downloads yet, so you will need to build it yourself
-- [Sandbox OS decisions](https://github.com/Ryan-Howard-Dev/sandbox-os/blob/main/docs/DECISIONS.md)
-- [What the home server can and cannot do](https://github.com/Ryan-Howard-Dev/sandbox-os/blob/main/docs/TIER34-FOUNDER-BRIEF.md) — a table that says "not started" where that is the truth
+- [Sandbox Audio README](https://github.com/Ryan-Howard-Dev/sandbox-audio#readme) — what the application does, what it does not do, and how to build it
+- [BUILDING.md](https://github.com/Ryan-Howard-Dev/sandbox-audio/blob/main/BUILDING.md) — there are no published downloads yet, so it must be built from source
+- [Why the library never deletes anything on its own](https://github.com/Ryan-Howard-Dev/sandbox-audio/blob/main/adr/001-locker-never-auto-delete.md) — a decision I was not prepared to compromise
+- [Sandbox OS decisions](https://github.com/Ryan-Howard-Dev/sandbox-os/blob/main/docs/DECISIONS.md) — the architectural record
+- [Sandbox Server capabilities](https://github.com/Ryan-Howard-Dev/sandbox-os/blob/main/docs/TIER34-FOUNDER-BRIEF.md) — a table marking each capability as working, partial or not started
 
-I write the documentation next to the code: a short note whenever a decision has to stick, and a
-table that keeps what actually works apart from what I have only planned.
+I write the documentation alongside the code. Every decision that has to hold is recorded briefly
+at the point it is made, and each capability is marked as shipped, partial or not started, so that
+the documentation can be relied upon to describe the software as it actually is rather than as it
+is intended to become.
 
-Everything public here is released under GPL-3.0.
+Everything published here is released under GPL-3.0.
