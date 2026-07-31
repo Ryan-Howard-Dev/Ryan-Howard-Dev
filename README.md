@@ -59,13 +59,20 @@ application works entirely on its own, and only the transfer between devices is 
 
 ## In development
 
-A unified record of what you have read and listened to, covering music, podcasts, audiobooks and
-ebooks together rather than keeping four separate histories. It will include shelves for what you
-intend to start, what you are part-way through and what you have finished, together with reading
-lists you arrange yourself. Where similar services keep that history on their own servers and
-analyse it, this record stays on your device, with synchronisation between your own machines
-through the Sandbox Server as an option rather than a requirement. Design work is complete;
-implementation has not begun.
+A single record of everything listened to and read, held across music, podcasts, audiobooks and
+ebooks together rather than as four separate histories that never meet. Every play is recorded
+once, appended and never rewritten, so the same record answers a question such as what was finished
+last month across every kind of media at once. Each work carries a state -- intended, started,
+finished, abandoned, being revisited -- so that a part-read book and a part-heard series behave
+alike, and lists can be arranged by hand for the backlog rather than the queue currently playing.
+An Insights view draws on that record to show how listening actually falls across the week and
+across formats.
+
+Comparable services keep this history on their own servers, where it is retained and analysed. Here
+it remains on your hardware. Synchronisation between your own machines through the Sandbox Server is
+optional, exporting to Last.fm or ListenBrainz is available if wanted and required by nothing, and
+in air-gapped operation no record leaves the device at all. The design is settled; implementation
+has not begun.
 
 ## Also
 
