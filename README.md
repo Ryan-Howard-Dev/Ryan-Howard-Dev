@@ -14,11 +14,11 @@ over years can be emptied by a licensing dispute the owner never hears about.
 Sandbox reverses that arrangement. The files are yours and they remain on your own devices. There
 is no account on a server belonging to me, because there is no server belonging to me.
 
-**You can still have an account.** Sandbox supports a single identity you create and use across
-every application in the group, so your settings, your library and your history follow you between
-your phone, your desktop and your television. That identity is stored on your own hardware and is
-shared with nobody. It exists to connect your devices to one another, not to connect you to me.
-Nothing is transmitted back to me, so there is nothing for me to sell, hand over, or lose.
+Sandbox supports a single identity, created by you and used across every application in the group,
+so that settings, library and listening history follow you between phone, desktop and television.
+That identity is held on your own hardware and shared with nobody. It connects your devices to one
+another; it does not connect you to me. Nothing is transmitted back to me, so there is nothing for
+me to sell, to surrender, or to lose.
 
 ## The applications
 
